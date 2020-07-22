@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A379142624BED0F7007BFD5E /* SalaryDetailUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A379142524BED0F7007BFD5E /* SalaryDetailUiView.swift */; };
 		A3B9B4E924BC59BD0026E68D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B4E824BC59BD0026E68D /* AppDelegate.swift */; };
 		A3B9B4EB24BC59BD0026E68D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B4EA24BC59BD0026E68D /* SceneDelegate.swift */; };
 		A3B9B4ED24BC59BD0026E68D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B4EC24BC59BD0026E68D /* ContentView.swift */; };
@@ -15,6 +16,8 @@
 		A3B9B4F524BC59BF0026E68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B9B4F324BC59BF0026E68D /* LaunchScreen.storyboard */; };
 		A3B9B50024BC59BF0026E68D /* Mzda_2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B4FF24BC59BF0026E68D /* Mzda_2020Tests.swift */; };
 		A3B9B50B24BC59BF0026E68D /* Mzda_2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B50A24BC59BF0026E68D /* Mzda_2020UITests.swift */; };
+		A3E5E4DD24C43BE200E57151 /* SalaryCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5E4DC24C43BE200E57151 /* SalaryCalculator.swift */; };
+		A3E5E4DF24C4901A00E57151 /* SalaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5E4DE24C4901A00E57151 /* SalaryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A379142524BED0F7007BFD5E /* SalaryDetailUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryDetailUiView.swift; sourceTree = "<group>"; };
 		A3B9B4E524BC59BD0026E68D /* Mzda 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mzda 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B9B4E824BC59BD0026E68D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B9B4EA24BC59BD0026E68D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		A3B9B50624BC59BF0026E68D /* Mzda 2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mzda 2020UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B9B50A24BC59BF0026E68D /* Mzda_2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mzda_2020UITests.swift; sourceTree = "<group>"; };
 		A3B9B50C24BC59BF0026E68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E5E4DC24C43BE200E57151 /* SalaryCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCalculator.swift; sourceTree = "<group>"; };
+		A3E5E4DE24C4901A00E57151 /* SalaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		A3B9B4DC24BC59BD0026E68D = {
 			isa = PBXGroup;
 			children = (
+				A3E5E4DE24C4901A00E57151 /* SalaryModel.swift */,
 				A3B9B4E724BC59BD0026E68D /* Mzda 2020 */,
 				A3B9B4FE24BC59BF0026E68D /* Mzda 2020Tests */,
 				A3B9B50924BC59BF0026E68D /* Mzda 2020UITests */,
@@ -99,6 +106,7 @@
 		A3B9B4E724BC59BD0026E68D /* Mzda 2020 */ = {
 			isa = PBXGroup;
 			children = (
+				A3E5E4DC24C43BE200E57151 /* SalaryCalculator.swift */,
 				A3B9B4E824BC59BD0026E68D /* AppDelegate.swift */,
 				A3B9B4EA24BC59BD0026E68D /* SceneDelegate.swift */,
 				A3B9B4EC24BC59BD0026E68D /* ContentView.swift */,
@@ -106,6 +114,7 @@
 				A3B9B4F324BC59BF0026E68D /* LaunchScreen.storyboard */,
 				A3B9B4F624BC59BF0026E68D /* Info.plist */,
 				A3B9B4F024BC59BF0026E68D /* Preview Content */,
+				A379142524BED0F7007BFD5E /* SalaryDetailUiView.swift */,
 			);
 			path = "Mzda 2020";
 			sourceTree = "<group>";
@@ -268,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B9B4E924BC59BD0026E68D /* AppDelegate.swift in Sources */,
+				A3E5E4DF24C4901A00E57151 /* SalaryModel.swift in Sources */,
+				A379142624BED0F7007BFD5E /* SalaryDetailUiView.swift in Sources */,
 				A3B9B4EB24BC59BD0026E68D /* SceneDelegate.swift in Sources */,
 				A3B9B4ED24BC59BD0026E68D /* ContentView.swift in Sources */,
+				A3E5E4DD24C43BE200E57151 /* SalaryCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
