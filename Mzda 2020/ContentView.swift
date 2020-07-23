@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var salaryModel: SalaryModel
+    @State var net: Int = 0
     @State var sleva = true
     @State var children = 0
     @State var gross = 30000
@@ -38,7 +38,7 @@ struct ContentView: View {
                 Text("Dětí: \(children)")
             }
             Button(action: {
-                self.salaryModel.net = SalaryCalculator()
+                self.net = SalaryCalculator()
                     .netSalary(gross: self.gross,
                                pocetDeti: self.children,
                                sleva: self.sleva)
@@ -46,7 +46,7 @@ struct ContentView: View {
                 Text("Spočítej")
             }
             Divider()
-            SalaryDetailUiView()
+            SalaryDetailUiView(net: $net)
         }
         .padding()
     }
@@ -55,6 +55,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        .environmentObject(SalaryModel())
     }
 }

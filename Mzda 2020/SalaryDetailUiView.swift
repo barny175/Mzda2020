@@ -9,22 +9,22 @@
 import SwiftUI
 
 struct SalaryDetailUiView: View {
-    @EnvironmentObject var salaryModel: SalaryModel
+    @Binding var net: Int
     
     var body: some View {
         VStack {
             HStack {
                 Text("Čistá mzda:")
                 Spacer()
-                Text("\(salaryModel.net)")
+                Text("\(net)")
             }
         }
     }
 }
 
 struct SalaryDetailUIView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        SalaryDetailUiView()
-            .environmentObject(SalaryModel())
+        SalaryDetailUiView(net: .constant(20000))
     }
 }
