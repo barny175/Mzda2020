@@ -12,25 +12,30 @@ struct ContentView: View {
     @State var net: Int = 0
     @State var sleva = true
     @State var children = 0
-    @State var gross = 30000
+    @State var gross: String
+    private var grossF: Double {
+        get {
+            if let x = Double(gross) {
+                return x
+            }
+            return 0.0
+        }
+        set(val) {
+            gross = "\(val)"
+        }
+    }
     
     var body: some View {
         VStack {
             Text("Mzda 2020")
                 .font(.title)
-            Stepper(onIncrement: {
-                    self.gross += 1000
-                },
-                onDecrement: {
-                    self.gross -= 1000
-                    if self.gross < 0 {
-                        self.gross = 0
-                    }
-                },
-                label: {
-                    Text("Hrubá mzda: \(gross)")
-                }
-            )
+            HStack{
+                Text("Hrubá mzda: ")
+                Spacer()
+                TextField("0", text: $gross)
+            }
+//            Slider(value: $grossF, in: 0.0...139000.0, step: 1000.0)
+            
             Toggle(isOn: $sleva) {
                 Text("Sleva na poplatníka:")
             }
@@ -39,7 +44,7 @@ struct ContentView: View {
             }
             Button(action: {
                 self.net = SalaryCalculator()
-                    .netSalary(gross: self.gross,
+                    .netSalary(gross: Int(self.grossF),
                                pocetDeti: self.children,
                                sleva: self.sleva)
             }) {
@@ -54,6 +59,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(gross: "")
     }
 }
