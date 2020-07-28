@@ -16,6 +16,7 @@
 		A3B9B4F524BC59BF0026E68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B9B4F324BC59BF0026E68D /* LaunchScreen.storyboard */; };
 		A3B9B50024BC59BF0026E68D /* Mzda_2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B4FF24BC59BF0026E68D /* Mzda_2020Tests.swift */; };
 		A3B9B50B24BC59BF0026E68D /* Mzda_2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B9B50A24BC59BF0026E68D /* Mzda_2020UITests.swift */; };
+		A3C9C87324CFE03C00A2A413 /* Invalidita.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9C87224CFE03C00A2A413 /* Invalidita.swift */; };
 		A3D3B26424CB435E0055B072 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D3B26324CB435E0055B072 /* TestView.swift */; };
 		A3E5E4DD24C43BE200E57151 /* SalaryCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5E4DC24C43BE200E57151 /* SalaryCalculator.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		A3B9B50624BC59BF0026E68D /* Mzda 2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mzda 2020UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B9B50A24BC59BF0026E68D /* Mzda_2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mzda_2020UITests.swift; sourceTree = "<group>"; };
 		A3B9B50C24BC59BF0026E68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3C9C87224CFE03C00A2A413 /* Invalidita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invalidita.swift; sourceTree = "<group>"; };
 		A3D3B26324CB435E0055B072 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		A3E5E4DC24C43BE200E57151 /* SalaryCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				A3B9B4EE24BC59BF0026E68D /* Assets.xcassets */,
 				A3B9B4F324BC59BF0026E68D /* LaunchScreen.storyboard */,
 				A3B9B4F624BC59BF0026E68D /* Info.plist */,
+				A3C9C87224CFE03C00A2A413 /* Invalidita.swift */,
 				A3B9B4F024BC59BF0026E68D /* Preview Content */,
 				A379142524BED0F7007BFD5E /* SalaryDetailUiView.swift */,
 				A3D3B26324CB435E0055B072 /* TestView.swift */,
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C9C87324CFE03C00A2A413 /* Invalidita.swift in Sources */,
 				A3D3B26424CB435E0055B072 /* TestView.swift in Sources */,
 				A3B9B4E924BC59BD0026E68D /* AppDelegate.swift in Sources */,
 				A379142624BED0F7007BFD5E /* SalaryDetailUiView.swift in Sources */,
@@ -447,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Mzda 2020/Preview Content\"";
 				DEVELOPMENT_TEAM = XL985C762J;
 				ENABLE_PREVIEWS = YES;
@@ -467,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Mzda 2020/Preview Content\"";
 				DEVELOPMENT_TEAM = XL985C762J;
 				ENABLE_PREVIEWS = YES;

@@ -24,14 +24,15 @@ class SalaryCalculator {
         return sleva
     }
     
-    func netSalary(gross: Int, pocetDeti: Int, sleva: Bool) -> Int {
+    func netSalary(gross: Int, pocetDeti: Int, sleva: Bool, invalidita: Invalidita) -> Int {
         let superhruba = (zdravotni + socialni + 1) * Double(gross)
         let zaokrouhlene = (superhruba/100).rounded(.up) * 100
         let zalohaNaDan = Int(zaokrouhlene * 0.15)
         let zdravotniASocialni = Int(Double(gross) * (0.045 + 0.065))
         
         let slevaZaDeti = slevaNaDeti(pocetDeti)
-        var zalohaPoSleve = zalohaNaDan - slevaZaDeti
+        
+        var zalohaPoSleve = zalohaNaDan - slevaZaDeti - slevaNaInvaliditu(stupne: invalidita)
         if sleva {
             zalohaPoSleve -= slevaNaPoplatnika
         }
@@ -40,7 +41,19 @@ class SalaryCalculator {
 //                zalohaPoSleve = 0
 //            }
         }
+        
         return gross - zdravotniASocialni - zalohaPoSleve
+    }
+    
+    fileprivate func slevaNaInvaliditu(stupne invalidita: Invalidita) -> Int {
+        switch invalidita {
+        case .plná:
+            return 420
+        case .částečná:
+            return 210
+        default:
+            return 0
+        }
     }
 }
 

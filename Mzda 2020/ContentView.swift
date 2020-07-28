@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var net: Int = 0
     @State var sleva = true
     @State var children = 0
+    @State var invalidity = Invalidita.žádná
     @State var gross: String
     private var grossF: Double {
         get {
@@ -36,6 +37,12 @@ struct ContentView: View {
                     .keyboardType(.numberPad)
             }
 //            Slider(value: $grossF, in: 0.0...139000.0, step: 1000.0)
+            Text("Invalidita:")
+            Picker("Invalidita", selection: $invalidity) {
+                ForEach (Invalidita.allCases) {stupen in
+                    Text(stupen.rawValue).tag(stupen)
+                }
+            }.pickerStyle(SegmentedPickerStyle())
             
             Toggle(isOn: $sleva) {
                 Text("Sleva na poplatníka:")
@@ -47,7 +54,8 @@ struct ContentView: View {
                 self.net = SalaryCalculator()
                     .netSalary(gross: Int(self.grossF),
                                pocetDeti: self.children,
-                               sleva: self.sleva)
+                               sleva: self.sleva,
+                               invalidita: self.invalidity)
             }) {
                 Text("Spočítej")
             }

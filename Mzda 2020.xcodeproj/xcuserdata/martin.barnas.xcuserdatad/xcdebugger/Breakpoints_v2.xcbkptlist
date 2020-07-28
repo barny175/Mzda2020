@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "netSalary(gross:pocetDeti:sleva:)"
+            landmarkName = "netSalary(gross:pocetDeti:sleva:invalidita:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
