@@ -33,6 +33,7 @@ struct ContentView: View {
                 Text("Hrubá mzda: ")
                 Spacer()
                 TextField("0", text: $gross)
+                    .keyboardType(.numberPad)
             }
 //            Slider(value: $grossF, in: 0.0...139000.0, step: 1000.0)
             
