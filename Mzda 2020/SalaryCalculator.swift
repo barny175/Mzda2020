@@ -24,7 +24,7 @@ class SalaryCalculator {
         return sleva
     }
     
-    func netSalary(gross: Int, pocetDeti: Int, sleva: Bool, invalidita: Invalidita) -> Int {
+    func netSalary(gross: Int, pocetDeti: Int, sleva: Bool, invalidita: Invalidita, student: Bool) -> Int {
         let superhruba = (zdravotni + socialni + 1) * Double(gross)
         let zaokrouhlene = (superhruba/100).rounded(.up) * 100
         let zalohaNaDan = Int(zaokrouhlene * 0.15)
@@ -33,6 +33,9 @@ class SalaryCalculator {
         let slevaZaDeti = slevaNaDeti(pocetDeti)
         
         var zalohaPoSleve = zalohaNaDan - slevaZaDeti - slevaNaInvaliditu(stupne: invalidita)
+        if student {
+            zalohaPoSleve -= 335
+        }
         if sleva {
             zalohaPoSleve -= slevaNaPoplatnika
         }

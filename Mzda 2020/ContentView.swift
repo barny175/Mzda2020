@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State var net: Int = 0
     @State var sleva = true
+    @State var student = false
     @State var children = 0
     @State var invalidity = Invalidita.žádná
     @State var gross: String
@@ -47,6 +48,9 @@ struct ContentView: View {
             Toggle(isOn: $sleva) {
                 Text("Sleva na poplatníka:")
             }
+            Toggle(isOn: $student) {
+                Text("Student:")
+            }
             Stepper(value: $children, in: 0...10) {
                 Text("Dětí: \(children)")
             }
@@ -55,7 +59,8 @@ struct ContentView: View {
                     .netSalary(gross: Int(self.grossF),
                                pocetDeti: self.children,
                                sleva: self.sleva,
-                               invalidita: self.invalidity)
+                               invalidita: self.invalidity,
+                               student: self.student)
             }) {
                 Text("Spočítej")
             }
